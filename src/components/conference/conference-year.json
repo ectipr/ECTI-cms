@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_conference_conference_years",
+  "info": {
+    "displayName": "conference_year",
+    "description": "One year a conference was held, and the website for that edition."
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "regex": "^https?://.+"
+    }
+  },
+  "config": {}
+}
