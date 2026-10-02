@@ -839,12 +839,6 @@ export interface ApiConferenceConference extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    years: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
   };
 }
 
