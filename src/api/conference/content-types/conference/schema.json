@@ -41,6 +41,16 @@
         }
       }
     },
+    "year_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "conference.conference-year",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "order": {
       "type": "integer",
       "pluginOptions": {
