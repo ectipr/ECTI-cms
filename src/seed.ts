@@ -434,19 +434,19 @@ async function seedActivities(strapi: Core.Strapi) {
   const activities = [
     {
       slug: 'ecti-con-2026',
-      shared: { year: 2026, type: 'conference', event_status: 'open', event_start_date: '2026-07-09', event_end_date: '2026-07-12', register_url: '' },
+      shared: { year: 2026, type: 'conference', event_start_date: '2026-07-09', event_end_date: '2026-07-12', register_url: '' },
       th: { title: 'ECTI-CON 2026', location: 'โรงแรมเลอ เมอริเดียน เชียงใหม่', description: [{ type: 'paragraph', children: [{ type: 'text', text: 'การประชุมวิชาการนานาชาติ ECTI ครั้งที่ 23 ด้านวิศวกรรมไฟฟ้า อิเล็กทรอนิกส์ คอมพิวเตอร์ โทรคมนาคมและสารสนเทศ' }] }], deadline: [{ title: 'กำหนดส่งบทความ', date: '2026-04-30' }, { title: 'แจ้งผลพิจารณา', date: '2026-05-31' }, { title: 'ส่งฉบับสมบูรณ์', date: '2026-06-15' }] },
       en: { title: 'ECTI-CON 2026', location: 'Le Meridien Chiang Mai Hotel', description: [{ type: 'paragraph', children: [{ type: 'text', text: 'The 23rd ECTI International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology.' }] }], deadline: [{ title: 'Paper Submission', date: '2026-04-30' }, { title: 'Notification', date: '2026-05-31' }, { title: 'Camera Ready', date: '2026-06-15' }] },
     },
     {
       slug: 'ecti-card-2026',
-      shared: { year: 2026, type: 'conference', event_status: 'upcoming', event_start_date: '2026-05-08', event_end_date: '2026-05-10', register_url: '' },
+      shared: { year: 2026, type: 'conference', event_start_date: '2026-05-08', event_end_date: '2026-05-10', register_url: '' },
       th: { title: 'ECTI-CARD 2026', location: 'มหาวิทยาลัยเชียงใหม่', description: [{ type: 'paragraph', children: [{ type: 'text', text: 'การประชุมวิชาการ ECTI Conference on Application Research and Development ครั้งที่ 5' }] }], deadline: [{ title: 'กำหนดส่งบทความ', date: '2026-03-15' }] },
       en: { title: 'ECTI-CARD 2026', location: 'Chiang Mai University', description: [{ type: 'paragraph', children: [{ type: 'text', text: 'The 5th ECTI Conference on Application Research and Development.' }] }], deadline: [{ title: 'Paper Submission', date: '2026-03-15' }] },
     },
     {
       slug: 'ecti-con-2025',
-      shared: { year: 2025, type: 'conference', event_status: 'finished', event_start_date: '2025-06-25', event_end_date: '2025-06-28', register_url: '' },
+      shared: { year: 2025, type: 'conference', event_start_date: '2025-06-25', event_end_date: '2025-06-28', register_url: '' },
       th: { title: 'ECTI-CON 2025', location: 'โรงแรมอมารี วอเตอร์เกท กรุงเทพฯ', description: [{ type: 'paragraph', children: [{ type: 'text', text: 'การประชุมวิชาการนานาชาติ ECTI ครั้งที่ 22 ณ กรุงเทพมหานคร' }] }], deadline: [] },
       en: { title: 'ECTI-CON 2025', location: 'Amari Watergate Hotel, Bangkok', description: [{ type: 'paragraph', children: [{ type: 'text', text: 'The 22nd ECTI International Conference held in Bangkok.' }] }], deadline: [] },
     },

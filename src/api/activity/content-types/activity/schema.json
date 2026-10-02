@@ -62,20 +62,6 @@
         }
       }
     },
-    "event_status": {
-      "type": "enumeration",
-      "enum": [
-        "open",
-        "register",
-        "upcoming",
-        "finished"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "location": {
       "type": "string",
       "pluginOptions": {

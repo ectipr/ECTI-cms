@@ -56,7 +56,6 @@ function toActivity(conference) {
     description: conference.description,
     year: conference.year ?? undefined,
     type: conference.type,
-    event_status: conference.eventStatus,
     event_start_date: conference.startDate ?? undefined,
     event_end_date: conference.endDate ?? undefined,
     register_url: conference.registerUrl ?? undefined,
@@ -95,7 +94,7 @@ async function main() {
   if (args.dryRun) {
     for (const conference of todo) {
       console.log(
-        `  would create  ${conference.startDate ?? "no date  "}  [${conference.eventStatus}]  ` +
+        `  would create  ${conference.startDate ?? "no date  "}  ` +
           `${conference.slug}\n                ${conference.title.slice(0, 76) || conference.name}`
       );
     }
@@ -138,7 +137,7 @@ async function main() {
     for (const line of report) console.log(`  - ${line}`);
   }
   console.log(
-    "\nThey show on /events under the 'Past' status filter. Check them there,\n" +
+    "\nThey show on /events, newest year first. Check them there,\n" +
       "and delete any that should not have come across."
   );
 }

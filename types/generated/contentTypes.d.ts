@@ -486,14 +486,6 @@ export interface ApiActivityActivity extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    event_status: Schema.Attribute.Enumeration<
-      ['open', 'register', 'upcoming', 'finished']
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
