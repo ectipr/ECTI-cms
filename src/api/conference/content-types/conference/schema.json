@@ -33,14 +33,6 @@
         }
       }
     },
-    "years": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "year_links": {
       "type": "component",
       "repeatable": true,
