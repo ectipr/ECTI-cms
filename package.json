@@ -8,6 +8,7 @@
     "build": "strapi build",
     "conf:import": "node scripts/import-legacy-conferences.mjs",
     "conf:scrape": "node scripts/scrape-legacy-conferences.mjs",
+    "conf:years": "node scripts/import-conference-years.mjs",
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",

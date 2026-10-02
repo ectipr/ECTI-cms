@@ -129,3 +129,8 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+
+# The conference year/link data is source of record, not an export — see
+# scripts/import-conference-years.mjs. The *.csv rule above is aimed at
+# database dumps and spreadsheets someone dropped in while debugging.
+!scripts/data/conference-years/*.csv
