@@ -2,13 +2,14 @@
   "collectionName": "components_conference_conference_years",
   "info": {
     "displayName": "conference_year",
-    "description": "One year a conference was held, and the website for that edition."
+    "description": "One year a conference was held, and the website for that edition. The year is a four-digit string, not a number — Strapi's number input groups thousands, so an integer year shows up as 2,001 while it is being typed."
   },
   "options": {},
   "attributes": {
     "year": {
-      "type": "integer",
-      "required": true
+      "type": "string",
+      "required": true,
+      "regex": "^\\d{4}$"
     },
     "link": {
       "type": "string",
