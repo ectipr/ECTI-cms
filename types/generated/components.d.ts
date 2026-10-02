@@ -21,6 +21,18 @@ export interface AboutObjectiveItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ConferenceConferenceYear extends Struct.ComponentSchema {
+  collectionName: 'components_conference_conference_years';
+  info: {
+    description: 'One year a conference was held, and the website for that edition.';
+    displayName: 'conference_year';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    year: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
 export interface DeadlineDeadlineItem extends Struct.ComponentSchema {
   collectionName: 'components_deadline_deadline_items';
   info: {
@@ -70,10 +82,11 @@ export interface UiButtonItem extends Struct.ComponentSchema {
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ComponentSchemas {
       'about.about-card': AboutAboutCard;
       'about.objective-item': AboutObjectiveItem;
+      'conference.conference-year': ConferenceConferenceYear;
       'deadline.deadline-item': DeadlineDeadlineItem;
       'guide.guide-step': GuideGuideStep;
       'ui.attachment': UiAttachment;
