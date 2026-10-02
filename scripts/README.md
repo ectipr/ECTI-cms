@@ -133,14 +133,16 @@ hand.
 | `event_start_date` / `event_end_date` | the `Date : 4-7 July 2018` line |
 | `year` | the year in that date |
 | `type` | always `conference` |
-| `event_status` | **computed from the date, not from the old page** |
 | `register_url` | the website button |
 | `location` | left empty — the old page never recorded it |
 
-`event_status` is worth explaining. The old page has an "Upcoming Conferences"
-heading above two countdown widgets whose timers ran out in 2024 and 2025 —
-nobody updated them. Trusting the heading would import two finished conferences
-as upcoming ones, so the status is decided by comparing the date to today.
+The scrape still works out an `eventStatus` for each conference, by comparing
+its date to today rather than trusting the old page — whose "Upcoming
+Conferences" heading sat above countdowns that ran out in 2024 and 2025 with
+nobody updating them. The CMS no longer stores it: a status is a thing someone
+has to remember to change, and across forty-nine mostly-finished conferences
+nobody does. The scraped value stays in `legacy-conferences.json` as a record
+of what the old page implied; the import ignores it.
 
 ### Things it cannot do
 
