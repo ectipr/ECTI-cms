@@ -1115,13 +1115,13 @@ export interface ApiJournalJournal extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    publishedAt: Schema.Attribute.DateTime;
     published_date: Schema.Attribute.DateTime &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
-    publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1190,6 +1190,12 @@ export interface ApiMemberTypeMemberType extends Struct.CollectionTypeSchema {
       'api::member-type.member-type'
     >;
     membership_fee: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    membership_fee_3yr: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -1593,13 +1599,13 @@ export interface ApiNewsPostNewsPost extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
+    publishedAt: Schema.Attribute.DateTime;
     published_date: Schema.Attribute.Date &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
-    publishedAt: Schema.Attribute.DateTime;
     read_time_min: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
