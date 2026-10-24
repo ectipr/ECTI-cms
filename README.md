@@ -43,7 +43,7 @@ rather than breaking — see [Troubleshooting](#troubleshooting).
 
 ## Running it locally
 
-**Requirements:** Node 20 (`engines` pins it), pnpm 10, and PostgreSQL. SQLite
+**Requirements:** Node 24 (`engines` pins it; matches Strapi Cloud), pnpm 10, and PostgreSQL. SQLite
 also works if you would rather not run a database — set `DATABASE_CLIENT=sqlite`
 and `DATABASE_FILENAME=.tmp/data.db` instead of filling in the Postgres block.
 
