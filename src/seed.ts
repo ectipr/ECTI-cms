@@ -512,31 +512,31 @@ async function seedMemberTypes(strapi: Core.Strapi) {
       key: 'regular',
       th: { type: 'สมาชิกสามัญ', eligibility: 'ผู้จบการศึกษาระดับปริญญาตรีขึ้นไปในสาขาวิศวกรรมไฟฟ้า คอมพิวเตอร์ อิเล็กทรอนิกส์ สื่อสารโทรคมนาคม เทคโนโลยีสารสนเทศ หรือสาขาที่เกี่ยวข้อง (สาขาอื่นต้องได้รับการรับรองจากสมาชิกสามัญหรือวุฒิสมาชิกอย่างน้อย 3 คน)' },
       en: { type: 'Regular Member', eligibility: "Holders of a bachelor's degree or higher in electrical, computer, electronics, telecommunications, or information technology engineering, or a related field (other fields require endorsement by at least 3 regular or fellow members)." },
-      membership_fee: 1000, entrance_fee: 200,
+      membership_fee: 1000, membership_fee_3yr: 2500, entrance_fee: 200,
     },
     {
       key: 'student',
       th: { type: 'สมาชิกนักศึกษา', eligibility: 'นักเรียนหรือนักศึกษาที่กำลังศึกษาอยู่ (ผู้ยังไม่บรรลุนิติภาวะต้องได้รับการรับรองจากผู้ปกครอง)' },
       en: { type: 'Student Member', eligibility: 'Currently enrolled students or pupils (minors require parental consent).' },
-      membership_fee: 200, entrance_fee: 100,
+      membership_fee: 200, membership_fee_3yr: null, entrance_fee: 100,
     },
     {
       key: 'fellow',
       th: { type: 'วุฒิสมาชิก', eligibility: 'สมาชิกสามัญมาแล้วไม่ต่ำกว่า 8 ปี หรือเคยเป็นกรรมการอำนวยการรวมอย่างน้อย 4 ปี และมีผลงานวิชาการหรือประสบการณ์วิชาชีพเป็นที่ประจักษ์ โดยคณะกรรมการอำนวยการลงมติเห็นชอบ' },
       en: { type: 'Fellow Member', eligibility: 'Regular members for at least 8 years, or former executive board members for a total of at least 4 years, with recognized academic or professional achievements, approved by resolution of the executive board.' },
-      membership_fee: null, entrance_fee: null,
+      membership_fee: null, membership_fee_3yr: null, entrance_fee: null,
     },
     {
       key: 'honorary',
       th: { type: 'สมาชิกกิตติมศักดิ์', eligibility: 'บุคคลผู้ทรงเกียรติ ทรงคุณวุฒิ หรือผู้มีอุปการคุณแก่สมาคม ซึ่งคณะกรรมการอำนวยการลงมติเชิญเข้าเป็นสมาชิก' },
       en: { type: 'Honorary Member', eligibility: 'Distinguished or highly qualified individuals, or benefactors of the association, invited to membership by resolution of the executive board.' },
-      membership_fee: null, entrance_fee: null,
+      membership_fee: null, membership_fee_3yr: null, entrance_fee: null,
     },
     {
       key: 'corporate',
       th: { type: 'สมาชิกนิติบุคคล', eligibility: 'สถาบันการศึกษา หน่วยงานของรัฐหรือเอกชน บริษัท และห้างร้านที่ให้การสนับสนุนสมาคม ซึ่งคณะกรรมการอำนวยการลงมติรับเข้าเป็นสมาชิก' },
       en: { type: 'Corporate Member', eligibility: 'Educational institutions, government or private agencies, companies, and businesses that support the association, admitted by resolution of the executive board.' },
-      membership_fee: null, entrance_fee: null,
+      membership_fee: null, membership_fee_3yr: null, entrance_fee: null,
     },
   ];
 
@@ -552,7 +552,7 @@ async function seedMemberTypes(strapi: Core.Strapi) {
     if (found) continue; // already seeded — don't clobber editor changes
 
     const doc = await strapi.documents('api::member-type.member-type').create({
-      data: { key: t.key, type: t.th.type, eligibility: t.th.eligibility, membership_fee: t.membership_fee, entrance_fee: t.entrance_fee },
+      data: { key: t.key, type: t.th.type, eligibility: t.th.eligibility, membership_fee: t.membership_fee, membership_fee_3yr: t.membership_fee_3yr, entrance_fee: t.entrance_fee },
       locale: 'th',
       status: 'published',
     });

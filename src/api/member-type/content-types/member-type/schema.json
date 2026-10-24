@@ -48,6 +48,14 @@
         }
       }
     },
+    "membership_fee_3yr": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "entrance_fee": {
       "type": "integer",
       "pluginOptions": {
