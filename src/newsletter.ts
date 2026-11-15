@@ -320,10 +320,15 @@ export async function broadcastNewsPost(strapi: Core.Strapi, documentId: string)
   const cfg = readConfig();
 
   // Raw knex on the pool, not strapi.documents() — see the note on `pending`.
+  //
+  // Any published locale will do, Thai first. This used to require the `th` row,
+  // so a post published in English only was skipped with nothing on screen to
+  // say so — the editor saw a successful publish and no campaign ever appeared.
   const post: any = await strapi.db
     .connection('news_posts')
-    .where({ document_id: documentId, locale: 'th' })
+    .where({ document_id: documentId })
     .whereNotNull('published_at')
+    .orderByRaw(`CASE WHEN locale = 'th' THEN 0 ELSE 1 END`)
     .orderBy('id', 'desc')
     .first('id', 'title', 'slug', 'summary', 'newsletter_sent');
 
